@@ -1,0 +1,6 @@
+
+
+<h1>Első vélemény</h1>
+
+ <p align='center'><br> <font color=blue  size='4pt'>Példa vélemény</font>
+</p><p class=default-spacer align='right'> <font color=black  size='3pt'>Közzétette: username1</font> </p>

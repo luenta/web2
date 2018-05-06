@@ -1,0 +1,7 @@
+﻿
+
+<h1>Első Hír</h1>
+
+ <p align='center'><br> <font color=blue  size='4pt'>Admin által írt hír! Test jellegel. Mely teszt sikeresnek bizonyult.</font>
+</p><p class=default-spacer align='right'> <font color=black  size='3pt'>Közzétette: username1</font> </p>
+

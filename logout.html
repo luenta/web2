@@ -1,0 +1,9 @@
+﻿<?php session_start();
+if (!isset($_SESSION['username'])) {
+echo "<script>alert('Nem tudsz kijelentkezni amíg nem vagy bejelentkezve!');document.location='signlogin.php'</script>";
+}else{
+session_destroy();
+echo "<script>alert('Kijelentkezve!');document.location='index.html'</script>";
+exit;
+}
+?>

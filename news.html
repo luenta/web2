@@ -1,0 +1,41 @@
+﻿<?php
+session_start();
+if(!isset($_SESSION['username'])){
+   echo "Bejelentkezés állapota: nincs bejelentkezve";
+}
+ else {
+    echo  "<<h1>"."Bejelentkezvés állapota: ".$_SESSION['username']."-ként bejelentkezve</h1>";
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css.css">
+    <title> Fintia Kft. </title>
+	
+</head>
+
+<body>
+ <div class="topnav">
+        <a href="index.html">Kezdőlap</a>
+        <a class="active" href="news.html">Hírek</a>
+        <a href="reviews.html">Vélemények</a>
+        <a href="adding.html">Új Hír</a>
+        <a href="addingr.html">Új Vélemény</a>
+		<a href="signlogin.php">Bejelentkezés/Regisztráció</a>
+        <a href="logout.html">Kijelentkezés</a>
+		<a href="contact.html">Kapcsolat</a><
+    </div>
+    <h1>Hírek</h1>
+<p>
+    <?php
+    $myfile = fopen("news.txt", "r");
+    echo fread($myfile,filesize("news.txt"));
+    fclose($myfile);
+    ?>
+</p>
+</body>
+
+</html>

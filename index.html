@@ -1,0 +1,74 @@
+﻿<?php
+session_start();
+if(!isset($_SESSION['username'])){
+   echo "Bejelentkezés állapota: nincs bejelentkezve";
+}
+ else {
+    echo  "<h1>"."Bejelentkezvés állapota: ".$_SESSION['username']."-ként bejelentkezve</h1>";
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css.css">
+    <title> Dintia Kft. </title>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+    </script>
+    <style type="text/css">
+        #rejtett {
+            background-color: #ccffcc;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        p.erzekeny {
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        p.hatteres {
+    background-color: #ccffcc;
+    }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $("#rejtett").css("display", "none");
+    });
+    </script>
+    <script type="text/javascript">
+    function kattintas() {
+        $(this).toggleClass("hatteres");
+    }
+     $(document).ready(function() {
+         $("p.erzekeny").click(kattintas);
+     });
+    </script>
+
+</head>
+
+<body>
+<div class="topnav">
+        <a class="active" href="index.html">Kezdőlap</a>
+        <a href="news.html">Hírek</a>
+        <a href="reviews.html">Vélemények</a>
+        <a href="adding.html">Új Hír</a>
+        <a href="addingr.html">Új Vélemény</a>
+		<a href="signlogin.php">Bejelentkezés/Regisztráció</a>
+        <a href="logout.html">Kijelentkezés</a>
+		<a href="contact.html">Kapcsolat</a><
+    </div>
+
+    <h1 class="erzekeny"> Üdvözöl a Fintia Kft. oldala</h1>
+    <p align="center" style="font-size:150%" class="erzekeny"> A Fintia Kft.-nél mindent megtesznek, hogy a vevők igényeit maximálisan kielégítsék</p>
+
+
+    <div class="footer">
+    
+    <p> &copy; Juhász Levente 2018 </p>
+    
+    </div>    
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
